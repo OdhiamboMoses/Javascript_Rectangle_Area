@@ -14,8 +14,8 @@ let answerSpan = document.querySelector(".answer")
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let widthValue = myWidth.value;
-    let lengthValue = myLength.value;
+    let widthValue = parseFloat(myWidth.value);
+    let lengthValue = parseFloat(myLength.value);
 
     function area(widthValue, lengthValue){
         const area = widthValue * lengthValue
@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
     }
 
     area(widthValue, lengthValue)
-})
+});
 
 
 // let recAera2 = inputLength * inputWidth;
@@ -38,3 +38,24 @@ form.addEventListener('submit', (e) => {
 
 // document.querySelector("p").innerHTML = recAera;
 
+let hobby;
+let employees = {
+    name:"Odhiambo Moses",
+    empNumber:365,
+    idNumber:12355367,
+    doBirth:1/1/2024,
+    phoneNumber:"0710116583",
+    hobbies:['Playing FIFA','Dancing','Eating','Playing Football']
+}
+
+console.log("The new employee is " + employees.name);
+console.log("His employee number is " + employees.empNumber)
+console.log("This is his most favorite hobby: " + employees.hobbies[employees.hobbies.length-1]);
+
+nuM = 1;
+while (nuM < employees.hobbies.length){
+    for (hobby in employees.hobbies) {
+        console.log(nuM + " " + employees.hobbies[hobby]);
+        nuM++; 
+    }
+}
